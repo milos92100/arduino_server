@@ -1,0 +1,23 @@
+{
+    "name": "jovana/arduino-server",
+    "type": "project",
+    "version": "0.0.1",
+    "authors": [
+
+        {
+            "name": "Jovana",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=8.2.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "10.0.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "ArduinoServer\\": "src/ArduinoServer"
+        }
+    }
+}

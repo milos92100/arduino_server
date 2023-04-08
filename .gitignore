@@ -1,0 +1,8 @@
+/tests/coverage-html/
+/vendor/
+/phpunit.xml
+/.buildpath
+*.project
+*.prefs
+deployment.properties
+/nbproject/private/

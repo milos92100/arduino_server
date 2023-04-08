@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit bootstrap="tests/bootstrap.php" colors="true"
+	pconvertErrorsToExceptions="true" convertNoticesToExceptions="true"
+	convertWarningsToExceptions="true" stopOnFailure="true" backupGlobals="false">
+	<testsuites>
+		<testsuite name="All">
+			<directory suffix="Test.php">./tests/ArduinoServer/</directory>
+			<exclude>./tests/ArduinoServer/Temp/</exclude>
+		</testsuite>
+		<testsuite name="Temp">
+			<directory suffix="Test.php">tests/PostOffice/Temp</directory>
+		</testsuite>
+	</testsuites>
+
+	<filter>
+		<whitelist processUncoveredFilesFromWhitelist="true">
+			<directory suffix=".php">./src</directory>
+		</whitelist>
+	</filter>
+
+	<logging>
+		<log type="coverage-html" target="docs/code_coverage" />
+	</logging>
+	<php>
+		<const name="TEST_DB_HOST" value="" />
+		<const name="TEST_DB_USERNAME" value="" />
+		<const name="TEST_DB_PASSWORD" value="" />
+	</php>
+</phpunit>

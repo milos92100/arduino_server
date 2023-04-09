@@ -11,6 +11,9 @@ use ArduinoServer\Core\Http\Abstraction\HttpRequestInterface;
 class DeviceApiController extends Controller {
 
     public function sync(HttpRequestInterface $request): HttpResponse {
+        
+        error_log($request->getQuery("test"));
+        
         $response = new HttpResponse();
         $response->setContent($request->getQuery("test"));
         return $response;

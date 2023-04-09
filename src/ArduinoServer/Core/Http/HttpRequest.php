@@ -96,7 +96,7 @@ final class HttpRequest implements HttpRequestInterface
      */
     private function get(array $source, string $name, $default = null)
     {
-        if (isEmpty($source[$name])) {
+        if (empty([$name])) {
             return $default;
         }
         return $source[$name];
@@ -111,7 +111,7 @@ final class HttpRequest implements HttpRequestInterface
      */
     private function has($source, $name): bool
     {
-        return ! isEmpty($source[$name]);
+        return !empty($source[$name]);
     }
 }
 

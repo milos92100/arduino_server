@@ -91,15 +91,15 @@ class Route implements RouteInterface
         });
 
         // reindex
-        $routeArgs = array_values($routeArgs);
+        $reindexedRouteArgs = array_values($routeArgs);
         
-        if (count($routeArgs) < 1) {
+        if (count($reindexedRouteArgs) < 1) {
             $this->actionIsDefined = false;
             return;
         }
 
         $this->actionIsDefined = true;
 
-        $this->setAction($routeArgs);
+        $this->setAction($reindexedRouteArgs);
     }
 }
